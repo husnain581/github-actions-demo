@@ -9,6 +9,7 @@ jobs:
   trigger_workflow:
     if: ${{ github.event.label.name == 'Trigger Workflow'}}
     runs-on: ubuntu-latest
+    name: 'Trigger Workflow when PR is labeled'
     steps:
       - name: Echo Workflow name
         shell: bash
