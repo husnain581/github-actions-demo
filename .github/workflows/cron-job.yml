@@ -1,0 +1,17 @@
+name: 'Trigger workflow on sunday night'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:
+        '5 1 * * SUN'
+
+jobs: 
+  trigger_workflow:
+    runs-on: ubuntu-latest
+    name: 'Schedule cron job'
+    steps:
+      - name: Echo Workflow name
+        shell: bash
+        run: |
+          echo "I am Running"
